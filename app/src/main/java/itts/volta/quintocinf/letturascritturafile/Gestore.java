@@ -1,6 +1,7 @@
 package itts.volta.quintocinf.letturascritturafile;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.content.res.Resources;
 
 import java.io.BufferedReader;
@@ -69,5 +70,14 @@ return sb.toString();
         }
         return sb.toString();
 
+}
+public String leggiFileAsset(Context c){
+    AssetManager am = c.getAssets();
+    try {
+        InputStream is= am.open("brani.txt");
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    return "";
 }
 }
